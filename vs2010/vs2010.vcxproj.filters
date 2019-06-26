@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GraphicsEngine">
+      <UniqueIdentifier>{e5a1f1ef-4925-47f8-9741-18f4da24b19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tasks">
+      <UniqueIdentifier>{ef9b4c91-988e-4fd9-893b-443763ba4880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\GraphicsApi">
+      <UniqueIdentifier>{8c0513a0-232e-4f52-af19-a9fb41b422b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\GraphicsApi\DirectX11">
+      <UniqueIdentifier>{440db122-2d66-4c15-81b1-815fad34d4d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\GraphicsApi\DirectX9">
+      <UniqueIdentifier>{131382a2-8b86-40d9-958b-0e3da8d905f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\GraphicsApi\OpenGL20">
+      <UniqueIdentifier>{51b87d37-6610-40c5-a137-209b9832b73b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Materials">
+      <UniqueIdentifier>{070e2211-9df6-4fae-a420-8793ca5b9e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Meshes">
+      <UniqueIdentifier>{838cabd8-cb59-4b46-b509-524ae3ca22cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Shaders">
+      <UniqueIdentifier>{25a54e98-37e4-471b-82a7-f703edf5699d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\PlatformApi">
+      <UniqueIdentifier>{9c9364d5-9927-415e-82e1-98c60393b939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\PlatformApi\Windows">
+      <UniqueIdentifier>{a4583537-0227-4b4a-8075-dba269bc2ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Shaders\DX11">
+      <UniqueIdentifier>{f6966da3-6147-4e5c-a7cb-61f4ec1b5985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Shaders\DX9">
+      <UniqueIdentifier>{dcdbda6a-34b1-4832-9358-a8bd15e89c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Shaders\GL20">
+      <UniqueIdentifier>{c83bf583-558f-43b9-99f2-df92395a0295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Internal">
+      <UniqueIdentifier>{10705b53-0dfa-4514-b97c-399b26dc7cc7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Tasks\ObjectRotator.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task01.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task02.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Vector4.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Application.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Camera.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Component.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\File.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsEngine.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsEngineFabric.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Light.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Math.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\MathConstants.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\MathUtils.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Matrix4x4.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Object.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\resource.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Scene.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\SceneUtils.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Texture2D.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Time.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Transform.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\tstring.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Vector3.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\FixedFunctionPipelineImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineContext.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineFabricImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\MaterialImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\MeshImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\PixelShaderImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\VertexShaderImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11ConstantBuffer.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngine.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineContext.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineFabric.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Material.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Mesh.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11PixelShader.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11VertexShader.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Convert.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9FixedFunctionPipeline.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngine.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineContext.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineFabric.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Material.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Mesh.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9PixelShader.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Texture2D.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9VertexShader.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Convert.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngine.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngineFabric.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Material.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Mesh.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\Material.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\Mesh.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshCube.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshCylinder.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshObjFile.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshQuad.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshSphere.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshTriangle.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Directory.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GUI.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GUI.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\FpsCounter.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GUIImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GUI.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GUI.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialDiffuse.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task07.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task06.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task04.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task03.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Texture2D.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Texture2D.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Rect.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Screen.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinWindow.h">
+      <Filter>GraphicsEngine\PlatformApi\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Platform.h">
+      <Filter>GraphicsEngine\PlatformApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task05_01.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task05_02.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task05_03.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Input.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\CameraController.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinInput.h">
+      <Filter>GraphicsEngine\PlatformApi\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\KeyCode.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Input.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Tasks\Task08.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\RenderTextureImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20RenderTexture.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GUIElement.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalGUI.h">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalInput.h">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\RenderTexture.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalApplication.h">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9RenderTexture.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11RenderTexture.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20TextureSampler.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9TextureSampler.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11TextureSampler.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\TextureFilterMode.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\TextureWrapMode.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\TextureSamplerImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\Texture2DImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\TextureImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlit.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimple.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Ray.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\RaycastHit.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsDeviceImpl.h">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\GraphicsDevice.h">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsDevice.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsDevice.h">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsDevice.h">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\ObjectStorage.h">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshPlane.h">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCube.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCyl.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MyMaterialDiffuse.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand2.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand1.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand3.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSandEarth.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialRoad.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialEarth.h">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\GraphicsEngine\Application.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Camera.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsEngine.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsEngineFabric.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Object.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Scene.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Texture2D.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Time.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Transform.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Vector3.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11ConstantBuffer.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngine.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineFabric.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Material.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Mesh.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11PixelShader.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11VertexShader.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9FixedFunctionPipeline.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngine.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineFabric.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Material.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Mesh.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9PixelShader.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Texture2D.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9VertexShader.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngine.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngineFabric.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Material.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Mesh.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\Material.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\Mesh.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshCube.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshCylinder.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshObjFile.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshQuad.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshSphere.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshTriangle.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Directory.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\main.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GUI.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GUI.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GUI.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GUI.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialDiffuse.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Texture2D.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Texture2D.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Screen.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinWindow.cpp">
+      <Filter>GraphicsEngine\PlatformApi\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Input.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinInput.cpp">
+      <Filter>GraphicsEngine\PlatformApi\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Input.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20RenderTexture.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalGUI.cpp">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalInput.cpp">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\RenderTexture.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalApplication.cpp">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9RenderTexture.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11RenderTexture.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20TextureSampler.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9TextureSampler.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11TextureSampler.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\TextureImpl.cpp">
+      <Filter>GraphicsEngine\GraphicsApi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlit.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimple.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\GraphicsDevice.cpp">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsDevice.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsDevice.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsDevice.cpp">
+      <Filter>GraphicsEngine\GraphicsApi\OpenGL20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\ObjectStorage.cpp">
+      <Filter>GraphicsEngine\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshPlane.cpp">
+      <Filter>GraphicsEngine\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCube.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCyl.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MyMaterialDiffuse.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Tasks\Task04.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand2.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand1.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand3.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSandEarth.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialRoad.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialEarth.cpp">
+      <Filter>GraphicsEngine\Materials</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderDiffuse.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderRoad.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderTask02Cube.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderTask02Cylinder.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderUnlit.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuse.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuse.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuseSpecular.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuseSpecular.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderRoad.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderRoad.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cube.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cube.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cylinder.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cylinder.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderUnlit.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderUnlit.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderDiffuse.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderDiffuse.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderRoad.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderRoad.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cube.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cube.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cylinder.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cylinder.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlit.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlit.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderSand.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderSand.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderSand.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderEarth.ps">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderEarth.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderEarth.fx">
+      <Filter>GraphicsEngine\Shaders\DX11</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderEarth.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderEarth.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCyl.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCyl.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCube.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCube.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand2.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand2.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand1.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand1.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\MyShaderDiffuse.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\MyShaderDiffuse.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\BUILD\Debug\GraphicsEngine\Shaders\GL20\ShaderSand3.fs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\BUILD\Debug\GraphicsEngine\Shaders\GL20\ShaderSand3.vs">
+      <Filter>GraphicsEngine\Shaders\DX9</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand3.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand3.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSandEarth.fs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSandEarth.vs">
+      <Filter>GraphicsEngine\Shaders\GL20</Filter>
+    </None>
+  </ItemGroup>
+</Project>

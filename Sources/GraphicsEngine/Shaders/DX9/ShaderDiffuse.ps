@@ -1,0 +1,80 @@
+struct Light
+{
+	float4	type;		// тип источника
+	float4	position;	// позиция источника (есть у Point и Spot)
+	float4	direction;	// направление света
+	float4	color;		// (цвет.r, цвет.g, цвет.b, интенсивность)
+};
+
+float4x4	matWorldNormal			: register(c0);
+float4x4	matWorldT				: register(c4);
+float4		materialColor			: register(c8);
+float4		lightsCount				: register(c9);
+Light		lights[3]				: register(c10);
+
+struct PS_INPUT
+{
+	float4 	Position		: POSITION;
+	float4 	Color			: COLOR0;
+	float4	uv1				: TEXCOORD0;
+	float4	LocalPosition	: TEXCOORD1;
+	float4	LocalNormal		: TEXCOORD2;
+};
+
+struct PS_OUTPUT
+{
+	float4 	Color	 	: COLOR0;
+};
+
+float3 calcDiffuse(float4 lightCol, float3 lightDir, float3 vertexNormal)
+{
+	float diffuse = saturate( dot(-lightDir, vertexNormal) );
+
+	// Цвет = diffuse * (цвет источника) * (интенсивность источника)
+	float3 color = diffuse * lightCol.rgb * lightCol.a;
+
+	return color;
+}
+
+PS_OUTPUT main( PS_INPUT input ) : COLOR0
+{
+	PS_OUTPUT output;
+	
+	float3 col = float3(0,0,0);
+
+	// Переводим нормаль из локальной в глобальную систему координат
+	float3 vertexNormal = mul(input.LocalNormal.xyz, matWorldNormal);
+	vertexNormal = normalize(vertexNormal);
+	
+	// Переводим позицию из локальной в глобальную систему координат
+	float3 vertexPos = mul(input.LocalPosition, matWorldT);
+	
+	for (int i = 0; i < 3; ++i)
+	{
+		// Выходим, как только закончились источники освещения
+		if (i >= lightsCount.x) break;
+	
+		float type = lights[i].type.x;
+		float epsilon = 0.001;
+		
+		float4 lightCol = lights[i].color;
+		float3 lightDir = float3(0,0,0);
+		
+		// Directional light
+		if (abs(type - 1) < epsilon)
+		{
+			lightDir = normalize(lights[i].direction.xyz).xyz;
+		}
+		// Point light
+		else if (abs(type - 2) < epsilon)
+		{
+			lightDir = normalize(vertexPos - lights[i].position.xyz).xyz;
+		}
+		
+		col += materialColor.rgb * calcDiffuse(lightCol, lightDir, vertexNormal);
+	}
+	
+	output.Color = float4(col, 1.0);
+	
+	return output;
+};

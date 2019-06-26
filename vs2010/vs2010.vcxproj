@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D30AE58-A191-4793-A694-219E941DC4BA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vs2010</RootNamespace>
+    <ProjectName>GraphicsEngine</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\SDKs\OpenGL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;..\SDKs\OpenGL\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)..\BUILD\Debug\$(TargetName)\</OutDir>
+    <IntDir>$(ProjectDir)..\BUILD\TempD\$(TargetName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)\Include;..\SDKs\OpenGL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)\Lib\x86;..\SDKs\OpenGL\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)..\BUILD\Release\</OutDir>
+    <IntDir>$(ProjectDir)..\BUILD\TempR\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Sources;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;comctl32.lib;glew32.lib;freeglut.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy  /S /I /E /Y "..\SDKs\OpenGL\dll" ..\BUILD\Debug\$(TargetName)
+xcopy  /S /I /E /Y "..\Sources\GraphicsEngine\Shaders" ..\BUILD\Debug\$(TargetName)\Shaders
+xcopy  /S /I /E /Y "..\Data" ..\BUILD\Debug\$(TargetName)\Data</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /s /q ..\BUILD\Debug\$(TargetName)\Shaders
+rmdir /s /q ..\BUILD\Debug\$(TargetName)\Data</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Sources</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>winmm.lib;d3d9.lib;d3dx9.lib;d3dxof.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dxguid.lib;dxerr.lib;comctl32.lib;glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>rmdir /s /q "..\BUILD\Release\Shaders"</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy  /S /I /E /Y "..\SDKs\OpenGL\dll" "..\BUILD\Release"
+xcopy  /S /I /E /Y "..\Sources\GraphicsEngine\Shaders" "..\BUILD\Release\Shaders"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\GraphicsEngine\Application.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Camera.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Component.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Directory.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\File.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11ConstantBuffer.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsDevice.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngine.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineContext.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineFabric.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GUI.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Material.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Mesh.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11PixelShader.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11RenderTexture.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Texture2D.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11TextureSampler.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11VertexShader.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Convert.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9FixedFunctionPipeline.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsDevice.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngine.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineContext.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineFabric.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Material.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Mesh.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9PixelShader.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9RenderTexture.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Texture2D.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9TextureSampler.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9VertexShader.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GUI.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\FixedFunctionPipelineImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsDeviceImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineContext.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineFabricImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GraphicsEngineImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\GUIImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\MaterialImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\MeshImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Convert.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsDevice.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngine.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngineFabric.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GUI.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Input.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Material.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Mesh.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20RenderTexture.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Texture2D.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20TextureSampler.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\PixelShaderImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\RenderTextureImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\Texture2DImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\TextureImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\TextureSamplerImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsApi\VertexShaderImpl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsEngine.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GraphicsEngineFabric.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GUI.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\GUIElement.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Input.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\GraphicsDevice.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalApplication.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalGUI.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\InternalInput.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Internal\ObjectStorage.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\KeyCode.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Light.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\Material.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialEarth.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialRoad.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialDiffuse.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand1.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand2.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSand3.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialSandEarth.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlit.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimple.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCube.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCyl.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Materials\MyMaterialDiffuse.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Math.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\MathConstants.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\MathUtils.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Matrix4x4.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\Mesh.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshCube.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshCylinder.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshObjFile.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshPlane.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshQuad.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshSphere.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Meshes\MeshTriangle.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Object.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Platform.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinInput.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinWindow.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Ray.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\RaycastHit.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Rect.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\RenderTexture.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\resource.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Scene.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\SceneUtils.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Screen.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Texture2D.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\TextureFilterMode.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\TextureWrapMode.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Time.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Transform.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\tstring.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Vector3.h" />
+    <ClInclude Include="..\Sources\GraphicsEngine\Vector4.h" />
+    <ClInclude Include="..\Sources\Tasks\CameraController.h" />
+    <ClInclude Include="..\Sources\Tasks\FpsCounter.h" />
+    <ClInclude Include="..\Sources\Tasks\ObjectRotator.h" />
+    <ClInclude Include="..\Sources\Tasks\Task.h" />
+    <ClInclude Include="..\Sources\Tasks\Task01.h" />
+    <ClInclude Include="..\Sources\Tasks\Task02.h" />
+    <ClInclude Include="..\Sources\Tasks\Task03.h" />
+    <ClInclude Include="..\Sources\Tasks\Task04.h" />
+    <ClInclude Include="..\Sources\Tasks\Task05_02.h" />
+    <ClInclude Include="..\Sources\Tasks\Task05_01.h" />
+    <ClInclude Include="..\Sources\Tasks\Task05_03.h" />
+    <ClInclude Include="..\Sources\Tasks\Task06.h" />
+    <ClInclude Include="..\Sources\Tasks\Task07.h" />
+    <ClInclude Include="..\Sources\Tasks\Task08.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\GraphicsEngine\Application.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Camera.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Directory.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11ConstantBuffer.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsDevice.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngine.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GraphicsEngineFabric.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11GUI.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Material.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Mesh.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11PixelShader.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11RenderTexture.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11Texture2D.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11TextureSampler.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX11\DX11VertexShader.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9FixedFunctionPipeline.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsDevice.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngine.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GraphicsEngineFabric.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Material.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Mesh.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9PixelShader.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9RenderTexture.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9Texture2D.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9TextureSampler.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9VertexShader.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\DirectX9\DX9GUI.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsDevice.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngine.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GraphicsEngineFabric.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20GUI.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Input.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Material.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Mesh.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20RenderTexture.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20Texture2D.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\OpenGL20\GL20TextureSampler.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsApi\TextureImpl.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsEngine.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GraphicsEngineFabric.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\GUI.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Input.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\GraphicsDevice.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalApplication.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalGUI.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\InternalInput.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Internal\ObjectStorage.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\Material.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialEarth.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialRoad.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialDiffuse.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand1.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand2.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSand3.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialSandEarth.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlit.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimple.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCube.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MaterialUnlitSimpleCyl.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Materials\MyMaterialDiffuse.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\Mesh.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshCube.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshCylinder.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshObjFile.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshPlane.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshQuad.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshSphere.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Meshes\MeshTriangle.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Object.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinInput.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\PlatformApi\Windows\WinWindow.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\RenderTexture.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Scene.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Screen.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Texture2D.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Time.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Transform.cpp" />
+    <ClCompile Include="..\Sources\GraphicsEngine\Vector3.cpp" />
+    <ClCompile Include="..\Sources\main.cpp" />
+    <ClCompile Include="..\Sources\Tasks\Task04.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\BUILD\Debug\GraphicsEngine\Shaders\GL20\ShaderSand3.fs" />
+    <None Include="..\BUILD\Debug\GraphicsEngine\Shaders\GL20\ShaderSand3.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderDiffuse.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderEarth.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderRoad.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderSand.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderTask02Cube.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderTask02Cylinder.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX11\ShaderUnlit.fx" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderEarth.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderEarth.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderSand.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderSand.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuse.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuse.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuseSpecular.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderDiffuseSpecular.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderRoad.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderRoad.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cube.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cube.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cylinder.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderTask02Cylinder.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderUnlit.ps" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\DX9\ShaderUnlit.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\MyShaderDiffuse.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\MyShaderDiffuse.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderDiffuse.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderDiffuse.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderEarth.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderEarth.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderRoad.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderRoad.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand1.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand1.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand2.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand2.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand3.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSand3.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSandEarth.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderSandEarth.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cube.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cube.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cylinder.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderTask02Cylinder.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlit.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlit.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCube.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCube.vs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCyl.fs" />
+    <None Include="..\Sources\GraphicsEngine\Shaders\GL20\ShaderUnlitSimpleCyl.vs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

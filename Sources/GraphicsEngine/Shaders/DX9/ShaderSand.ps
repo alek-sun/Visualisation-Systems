@@ -1,0 +1,26 @@
+sampler2D texture1 : register(s0);
+
+struct PS_INPUT
+{
+	float4 	Position	: POSITION;
+	float4 	Color		: COLOR0;
+	float4	uv1			: TEXCOORD0;
+};
+
+struct PS_OUTPUT
+{
+	float4 	Color	 	: COLOR0;
+};
+
+PS_OUTPUT main( PS_INPUT input )
+{
+	PS_OUTPUT output;
+
+	float2 uv1Scale = float2(0.2, 10);
+	float3 color1 = tex2D( texture1, input.uv1.xy * uv1Scale ).rgb;
+	
+	output.Color.rgb = color1;
+	output.Color.w   = input.Color.w;
+
+	return output;
+};
